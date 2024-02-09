@@ -6,6 +6,7 @@ import {
 } from "./middlewares";
 import express from "express";
 import activitiesRouter from "./routes/activities";
+import swagger from "./swagger";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,13 +16,8 @@ app.use(corsMiddleware);
 app.use(bodyParser.json());
 
 // Routes
-app.get("/", (req, res) => {
-  res.send(
-    '<h1>Activties API</h1><a href="/api/v1/activities">activities route</a>'
-  );
-});
-
 app.use("/api/v1/activities", activitiesRouter);
+app.use("/", swagger);
 
 //error handling middleware
 app.use(notFoundMiddleware);
