@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node-express-api:
+    build:
+      context: ./node-express-api
+    ports:
+      - "3000:3000"
+
+  vite-react-frontend:
+    build:
+      context: ./vite-react-frontend
+    ports:
+      - "5000:5000"
