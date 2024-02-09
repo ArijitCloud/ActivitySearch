@@ -1,4 +1,5 @@
 import bodyParser from "body-parser";
+import "dotenv/config";
 import {
   corsMiddleware,
   errorHandler,
