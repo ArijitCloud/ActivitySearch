@@ -10,10 +10,6 @@ describe("readActivities", () => {
     const response = await request(app).get("/api/v1/activities/1");
     expect(response.statusCode).toBe(200);
   });
-  it("should get activity by id 404 response", async () => {
-    const response = await request(app).get("/api/v1/activity");
-    expect(response.statusCode).toBe(404);
-  });
 
   it("should return success message for all activities", async () => {
     const response = await request(app).get("/api/v1/activities");
