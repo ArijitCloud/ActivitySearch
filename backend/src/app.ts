@@ -5,8 +5,8 @@ import {
   notFoundMiddleware,
 } from "./middlewares";
 import express from "express";
-import activitiesRouter from "./routes/activities";
-import swagger from "./swagger";
+import activitiesRouter from "./routes/activities.route";
+import swagger from "./common/swagger";
 
 const app = express();
 const PORT = process.env.PORT || 3000;

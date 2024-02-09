@@ -3,7 +3,7 @@ import express from "express";
 import {
   getActivities,
   getActivityById,
-} from "../controllers/activitiesController";
+} from "../controllers/activities.controller";
 
 const router = express.Router();
 
