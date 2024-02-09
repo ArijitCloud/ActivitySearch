@@ -1,6 +1,10 @@
 import fs from "fs/promises";
 import { Activity } from "../models/activity";
 
+/**
+ * Reads the activities from the activities.json file
+ * @returns a list of activities
+ */
 const readActivities = async () => {
   try {
     const rawActivities = await fs.readFile(
