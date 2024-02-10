@@ -15,8 +15,8 @@ describe("readActivities", () => {
     const response = await request(app).get("/api/v1/activities");
     expect(response.body.success).toBe(true);
   });
-  it("should return success message for single activity", async () => {
-    const response = await request(app).get("/api/v1/activities/2");
+  it("should return success message for filtered activity", async () => {
+    const response = await request(app).get("/api/v1/activities?title='German Tour'");
     expect(response.body.success).toBe(true);
   });
 
@@ -25,8 +25,8 @@ describe("readActivities", () => {
     expect(response.body.data).toBeDefined();
   });
 
-  it("should return empty string for single activity that doesn't exist", async () => {
-    const response = await request(app).get("/api/v1/activities/100");
-    expect(response.body.data).toBe("");
+  it("should return empty array for title that doesn't exist", async () => {
+    const response = await request(app).get("/api/v1/activities?title='unknown'");
+    expect(response.body.data).toStrictEqual([]);
   });
 });

@@ -1,25 +1,25 @@
 import fs from "fs/promises";
-import readActivities from "../data/readActivities";
+import readFileData from "../common/readFileData";
 jest.mock("fs/promises");
 
-describe("readActivities", () => {
+describe("readFileData", () => {
   //reset mocks before each test
   beforeEach(() => {
     jest.resetAllMocks();
   });
 
-  it("should return activities", async () => {
-    const mockActivities = `[
+  it("should return file data", async () => {
+    const mockFileData = `[
       { "id": 1, "title": "Activity 1" },
       { "id": 2, "title": "Activity 2" }
     ]`;
     (fs.readFile as jest.MockedFunction<typeof fs.readFile>).mockResolvedValue(
-      mockActivities
+      mockFileData
     );
 
-    const activities = await readActivities();
+    const fileData = await readFileData("somefile.json");
 
-    expect(activities).toEqual(JSON.parse(mockActivities));
+    expect(fileData).toEqual(JSON.parse(mockFileData));
   });
 
   it("should return an empty array when there's an error", async () => {
@@ -27,8 +27,8 @@ describe("readActivities", () => {
       new Error("File read error")
     );
 
-    const activities = await readActivities();
+    const fileData = await readFileData("somefile.json");
 
-    expect(activities).toEqual([]);
+    expect(fileData).toEqual([]);
   });
 });

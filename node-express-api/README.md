@@ -7,3 +7,7 @@
 - add more tests (going to add if time permits)
 - authentication (time limit constraints for PoC)
 - add linter and more strict type checking(doing it in frontend)
+- no localization support for now
+
+# Assumption
+- location not sure what to include, added town and country for now
