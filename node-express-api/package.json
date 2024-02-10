@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "activity-api",
   "version": "1.0.0",
   "description": "backend for activity search api",
   "main": "index.js",
