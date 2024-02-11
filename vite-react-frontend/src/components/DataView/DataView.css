@@ -8,6 +8,7 @@
 .header-row {
   display: contents;
   font-weight: bold;
+  height: 5vh;
 }
 .header-row .column {
   background-color: #f0f0f0;

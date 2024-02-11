@@ -4,7 +4,7 @@ import "./DataView.css";
 export interface DataViewProps {
   data: ReadonlyArray<Activity>;
 }
-const DataView = ({ data }: DataViewProps) => {
+export const DataView = ({ data }: DataViewProps) => {
   return (
     <div className="grid-container">
       <div className="header-row">
@@ -28,5 +28,3 @@ const DataView = ({ data }: DataViewProps) => {
     </div>
   );
 };
-
-export default DataView;

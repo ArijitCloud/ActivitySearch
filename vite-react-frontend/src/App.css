@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  width: 100%;
 }
 
 .logo {
@@ -41,4 +42,11 @@
 .search-input {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
+}
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 85vh;
 }

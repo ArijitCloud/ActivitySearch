@@ -1,6 +1,5 @@
 import "./App.css";
-import DataView from "./components/DataView/DataView";
-import SearchInput from "./components/SearchInput/SearchInput";
+import { DataView, MessageView, SearchInput } from "./components";
 import useGetActivities from "./data/useGetActivities";
 
 function App() {
@@ -11,15 +10,27 @@ function App() {
     setSearchText(searchText);
   };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error</p>;
+  // TODO: localize these texts
+  const loadingText = "Loading...";
+  const errorText = "Error";
+  const noResultsText = "No activities found";
 
   return (
     <main className="activity-main">
       <section className="search-input">
         <SearchInput handleSearch={onHandleSearch} />
       </section>
-      <DataView data={activities} />
+      <section className="activity-list">
+        {loading ? (
+          <MessageView message={loadingText} />
+        ) : error ? (
+          <MessageView message={errorText} />
+        ) : activities.length < 1 ? (
+          <MessageView message={noResultsText} />
+        ) : (
+          <DataView data={activities} />
+        )}
+      </section>
     </main>
   );
 }
