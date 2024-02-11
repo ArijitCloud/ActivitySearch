@@ -12,8 +12,8 @@ function App() {
 
   // TODO: localize these texts
   const loadingText = "Loading...";
-  const errorText = "Error";
-  const noResultsText = "No activities found";
+  const errorText = "Error loading activities.";
+  const noResultsText = "No activities found.";
 
   return (
     <main className="activity-main">

@@ -9,6 +9,7 @@
 - set up tests
 - accesibility
 - small screen compatibility
+- add clear search and search icon button for click
 
 # Excluded
 - client side caching
