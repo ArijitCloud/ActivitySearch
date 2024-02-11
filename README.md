@@ -13,7 +13,7 @@ Displays list of activities with ability to search with name of the activity
 
 # Design decisions
 
-- using node js for http api for consistency in code and context switching between frontend and backend language. Also learning purpose
+- using node js for http api for consistency in code and context switching between frontend and backend language. Also decided it over dot net core for learning purpose.
 - using vite react js frontend as wanted to keep vanilla react js and node js for this project since I did not want extra overhead from nextjs dependencies
 - data kept as is in json files inside api project because of time constraints on using a db (also not
   mentioned in assigment guide)
