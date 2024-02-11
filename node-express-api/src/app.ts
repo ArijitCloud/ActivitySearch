@@ -10,7 +10,7 @@ import activitiesRouter from "./routes/activities.route";
 import swagger from "./common/swagger";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(corsMiddleware);

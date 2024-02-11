@@ -4,10 +4,12 @@ services:
     build:
       context: ./node-express-api
     ports:
-      - "3000:3000"
+      - "3001:3001"
 
   vite-react-frontend:
     build:
       context: ./vite-react-frontend
     ports:
-      - "5000:5000"
+      - "3000:3000"
+    depends_on:
+      - node-express-api
