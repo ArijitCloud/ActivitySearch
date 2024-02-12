@@ -5,7 +5,6 @@
 
 # TODO
 
-- accesibility
 - small screen compatibility
 - add clear search and search icon button for click
 
@@ -14,6 +13,7 @@
 - theming
 - localization
 - more testing (demonstrated some testing)
+- advanced accesibilty feature, custom keyboard nav
 
 # Design decisions
 - css grid over semantic table for flexibility with design and responsiveness

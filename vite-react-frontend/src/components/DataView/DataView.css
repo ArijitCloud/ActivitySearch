@@ -21,3 +21,7 @@
 .column {
   padding: 10px;
 }
+
+.item-row .column:first-child {
+  text-align: justify;
+}

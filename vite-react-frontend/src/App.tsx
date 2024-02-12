@@ -16,22 +16,25 @@ function App() {
   const noResultsText = "No activities found.";
 
   return (
-    <main className="activity-main">
-      <section className="search-input">
-        <SearchInput handleSearch={onHandleSearch} />
-      </section>
-      <section className="activity-list">
-        {loading ? (
-          <MessageView message={loadingText} />
-        ) : error ? (
-          <MessageView message={errorText} />
-        ) : activities.length < 1 ? (
-          <MessageView message={noResultsText} />
-        ) : (
-          <DataView data={activities} />
-        )}
-      </section>
-    </main>
+    <>
+      <h1 style={{fontSize:"1.5rem",margin:"0.5rem"}}>Activity Search</h1>
+      <main className="activity-main">
+        <section className="search-input">
+          <SearchInput handleSearch={onHandleSearch} />
+        </section>
+        <section className="activity-list">
+          {loading ? (
+            <MessageView message={loadingText} />
+          ) : error ? (
+            <MessageView message={errorText} />
+          ) : activities.length < 1 ? (
+            <MessageView message={noResultsText} />
+          ) : (
+            <DataView data={activities} />
+          )}
+        </section>
+      </main>
+    </>
   );
 }
 
