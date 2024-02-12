@@ -5,7 +5,6 @@
 
 # TODO
 
-- extract reducer
 - set up tests
 - accesibility
 - small screen compatibility
