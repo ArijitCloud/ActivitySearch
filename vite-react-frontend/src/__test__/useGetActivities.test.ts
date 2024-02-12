@@ -1,7 +1,7 @@
 import { renderHook, act, waitFor } from "@testing-library/react";
 import useGetActivities from "../data/useGetActivities";
 import * as fetchActivitiesModule from "../data/fetchActivities";
-import { activityResponseData } from "./mocks";
+import { mockActivityResponseData } from "./mocks";
 
 // Mock fetchActivities module
 jest.mock("../data/fetchActivities");
@@ -9,7 +9,7 @@ jest.mock("../data/fetchActivities");
 describe("useGetActivities", () => {
   it("fetches activities data with correct search text", async () => {
     const fetchActivitiesSpy = jest.spyOn(fetchActivitiesModule, "default");
-    fetchActivitiesSpy.mockResolvedValue(activityResponseData);
+    fetchActivitiesSpy.mockResolvedValue(mockActivityResponseData);
 
     const { result } = renderHook(() => useGetActivities());
 
@@ -24,7 +24,7 @@ describe("useGetActivities", () => {
   });
   it("fetches activities data", async () => {
     const fetchActivitiesSpy = jest.spyOn(fetchActivitiesModule, "default");
-    fetchActivitiesSpy.mockResolvedValue(activityResponseData);
+    fetchActivitiesSpy.mockResolvedValue(mockActivityResponseData);
 
     const { result } = renderHook(() => useGetActivities());
 
@@ -35,7 +35,7 @@ describe("useGetActivities", () => {
     await waitFor(() => !result.current.loading);
 
     // Assert that the response is as expected
-    expect(result.current.activities).toEqual(activityResponseData);
+    expect(result.current.activities).toEqual(mockActivityResponseData);
   });
   it("handles api call error when fetching activities data", async () => {
     const fetchActivitiesSpy = jest.spyOn(fetchActivitiesModule, "default");

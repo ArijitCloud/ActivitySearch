@@ -3,7 +3,7 @@ import fetchMock from "jest-fetch-mock";
 import fetchActivities from "../data/fetchActivities";
 import {
   fetchEmptyStringSearchApiUrl,
-  activityResponseData,
+  mockActivityResponseData,
 } from "./mocks";
 
 enableFetchMocks();
@@ -16,7 +16,7 @@ describe("fetchActivities", () => {
   it("fetches activities data with correct api url", async () => {
     const responseData = {
       success: true,
-      data: activityResponseData,
+      data: mockActivityResponseData,
     };
     fetchMock.mockResponseOnce(JSON.stringify(responseData));
 
@@ -29,7 +29,7 @@ describe("fetchActivities", () => {
   it("fetches activities data", async () => {
     const responseData = {
       success: true,
-      data: activityResponseData,
+      data: mockActivityResponseData,
     };
     fetchMock.mockResponseOnce(JSON.stringify(responseData));
 

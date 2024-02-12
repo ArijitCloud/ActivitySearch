@@ -5,7 +5,6 @@
 
 # TODO
 
-- set up tests
 - accesibility
 - small screen compatibility
 - add clear search and search icon button for click
@@ -14,6 +13,7 @@
 - client side caching
 - theming
 - localization
+- more testing (demonstrated some testing)
 
 # Design decisions
 - css grid over semantic table for flexibility with design and responsiveness

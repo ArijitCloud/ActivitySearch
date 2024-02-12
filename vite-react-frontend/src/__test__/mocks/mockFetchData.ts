@@ -5,7 +5,7 @@ const apiUrl = (searchText: string) =>
 
 export const fetchEmptyStringSearchApiUrl = apiUrl("");
 
-export const activityResponseData:ReadonlyArray<Activity> = [
+export const mockActivityResponseData:ReadonlyArray<Activity> = [
   {
     id: 1,
     title: "Activity 1",
