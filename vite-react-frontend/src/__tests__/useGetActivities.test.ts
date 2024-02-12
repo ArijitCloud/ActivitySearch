@@ -1,7 +1,7 @@
 import { renderHook, act, waitFor } from "@testing-library/react";
 import useGetActivities from "../data/useGetActivities";
 import * as fetchActivitiesModule from "../data/fetchActivities";
-import { mockActivityResponseData } from "./mocks";
+import { mockActivityResponseData } from "../mocks";
 
 // Mock fetchActivities module
 jest.mock("../data/fetchActivities");

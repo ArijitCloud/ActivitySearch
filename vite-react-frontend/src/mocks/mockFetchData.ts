@@ -1,4 +1,4 @@
-import { Activity } from "../../types/activity";
+import { Activity } from "../types/activity";
 
 const apiUrl = (searchText: string) =>
   `http://localhost:3001/api/v1/activities?title=${searchText}`;

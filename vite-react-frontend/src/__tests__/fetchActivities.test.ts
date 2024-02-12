@@ -4,7 +4,7 @@ import fetchActivities from "../data/fetchActivities";
 import {
   fetchEmptyStringSearchApiUrl,
   mockActivityResponseData,
-} from "./mocks";
+} from "../mocks";
 
 enableFetchMocks();
 

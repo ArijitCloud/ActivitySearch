@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import * as useGetActivitiesModule from "../data/useGetActivities";
 import App from "../App";
 import "@testing-library/jest-dom";
-import { mockActivityResponseData } from "./mocks";
+import { mockActivityResponseData } from "../mocks";
 
 jest.mock("../data/useGetActivities");
 
