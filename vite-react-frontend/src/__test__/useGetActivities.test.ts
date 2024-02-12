@@ -19,6 +19,7 @@ describe("useGetActivities", () => {
 
     await waitFor(() => !result.current.loading);
 
+    // Assert that the fetchActivities function was called with the right search text
     expect(fetchActivitiesSpy).toHaveBeenCalledWith("Berlin");
   });
   it("fetches activities data", async () => {
@@ -33,6 +34,7 @@ describe("useGetActivities", () => {
 
     await waitFor(() => !result.current.loading);
 
+    // Assert that the response is as expected
     expect(result.current.activities).toEqual(activityResponseData);
   });
   it("handles api call error when fetching activities data", async () => {
