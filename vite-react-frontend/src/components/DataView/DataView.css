@@ -19,7 +19,7 @@
 }
 
 .column {
-  padding: 10px;
+  padding: 0.5em;
 }
 
 .item-row .column:first-child {
