@@ -6,8 +6,11 @@ function App() {
   const { setSearchText, activities, loading, error } = useGetActivities();
 
   const onHandleSearch = (searchText: string) => {
-    console.log("searchText::", searchText);
     setSearchText(searchText);
+  };
+
+  const onClear = () => {
+    setSearchText("");
   };
 
   // TODO: localize these texts
@@ -17,10 +20,10 @@ function App() {
 
   return (
     <>
-      <h1 style={{fontSize:"1.5rem",margin:"0.5rem"}}>Activity Search</h1>
+      <h1 style={{ fontSize: "1.5rem", margin: "0.5rem" }}>Activity Search</h1>
       <main className="activity-main">
         <section className="search-input">
-          <SearchInput handleSearch={onHandleSearch} />
+          <SearchInput handleSearch={onHandleSearch} handleClear={onClear} />
         </section>
         <section className="activity-list">
           {loading ? (

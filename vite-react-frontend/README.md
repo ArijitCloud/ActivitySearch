@@ -3,17 +3,16 @@
 - npm install
 - npm run dev
 
-# TODO
 
-- small screen compatibility
-- add clear search and search icon button for click
+# Left out parts
+- client side caching for fetch calls - already using memory cache for current backend api
+- theming - was not required part of the requirement, so had set low priority but was planning to use css var to switch dark and light theme
+- localization - using static text only in English for this project
+- more testing (added some testing - but possible to add more test possibly some storybook as well when time permits)
+- advanced accesibilty feature, custom keyboard nav - require focus trap with custom keyboard event
+- icon button for clearing and submitting search - requires using svg button and plugging into existing event for clear and submit search, also need to lazy load images and consider accessibility.
+- custom ui for small screen using media query - currently the ui is responsive so it's still possible to use it in smaller screen, but not optimize for it
 
-# Excluded
-- client side caching
-- theming
-- localization
-- more testing (demonstrated some testing)
-- advanced accesibilty feature, custom keyboard nav
 
 # Design decisions
 - css grid over semantic table for flexibility with design and responsiveness
